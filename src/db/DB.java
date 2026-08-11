@@ -1,4 +1,4 @@
-package DB;
+package db;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Properties;
 public class DB {
     private static Connection conn = null;
 
-    public static Connection getConnection() throws DbException {
+    public static Connection getConnection(){
         if (conn == null) {
             try {
                 Properties props = loadProperties();
@@ -22,7 +22,7 @@ public class DB {
         return conn;
     }
 
-    public static void closeConnection() throws DbException {
+    public static void closeConnection(){
         if (conn != null) {
             try {
                 conn.close();
@@ -32,7 +32,7 @@ public class DB {
         }
     }
 
-    private static Properties loadProperties() throws DbException {
+    private static Properties loadProperties() {
         try (FileInputStream fs = new FileInputStream("db.properties")) {
             Properties props = new Properties();
             props.load(fs);
@@ -43,7 +43,7 @@ public class DB {
         }
     }
 
-    public static void closeStatement(Statement st) throws DbException {
+    public static void closeStatement(Statement st) {
         if (st != null) {
             try {
                 st.close();
@@ -53,7 +53,7 @@ public class DB {
         }
     }
 
-    public static void closeResultSet(ResultSet rs) throws DbException {
+    public static void closeResultSet(ResultSet rs) {
         if (rs != null) {
             try {
                 rs.close();

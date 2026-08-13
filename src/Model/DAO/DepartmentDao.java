@@ -1,4 +1,4 @@
-package Model.DAO.Impl;
+package Model.DAO;
 
 import entities.Department;
 

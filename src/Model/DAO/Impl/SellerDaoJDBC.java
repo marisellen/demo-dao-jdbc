@@ -1,5 +1,6 @@
 package Model.DAO.Impl;
 
+import Model.DAO.SellerDao;
 import db.DB;
 import db.DbException;
 import entities.Department;

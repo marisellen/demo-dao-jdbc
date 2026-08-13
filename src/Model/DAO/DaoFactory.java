@@ -1,5 +1,7 @@
-package Model.DAO.Impl;
+package Model.DAO;
 
+import Model.DAO.Impl.DepartmentDaoJDBC;
+import Model.DAO.Impl.SellerDaoJDBC;
 import db.DB;
 
 public class DaoFactory {
